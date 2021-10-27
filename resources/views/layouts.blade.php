@@ -10,6 +10,9 @@
 @livewireStyles
     </head>
     <body >
+        <nav class="navbar sticky-top navbar-dark bg-dark">
+            <a class="navbar-brand" href="/">toDoList</a>
+          </nav>
         @yield('content')
         @livewireScripts
     </body>

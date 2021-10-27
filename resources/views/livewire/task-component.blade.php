@@ -4,8 +4,14 @@
         <div class="col-4">
             {{ $t->name }}
         </div>
-        <div class="col-6">
+        <div class="col-4">
             {{ $t->description }}
+        </div>
+        <div class="col-2">
+            <button class="btn btn-warning text-white" wire:click="edit({{ $t->id }})">Editar</button>
+        </div>
+        <div class="col-2">
+            <button class="btn btn-danger text-white" wire:click="destroy({{ $t->id }})">Eliminar</button>
         </div>
     @empty
         <p>Not found tasks</p>
@@ -16,7 +22,8 @@
       <div class="form">
             <div class="form-group">
                 <input type="text" wire:model="name" class="form-control">
-                <button wire:click='addTask' class="btn btn-success">Agregar</button>
+                <input type="text" wire:model="description">
+                <button wire:click='store' class="btn btn-success">Agregar</button>
             </div>
         </div>
       </div>
