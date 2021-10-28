@@ -1,12 +1,10 @@
-<div wire:ignore.self class="modal fade" id="addTaskModal" tabindex="-1" role="dialog"
+<div wire:ignore.self class="modal fade" id="editTaskModal" tabindex="-1" role="dialog"
     aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Add task</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true close-btn">×</span>
-                </button>
+                <h5 class="modal-title" id="exampleModalLabel">Edit task</h5>
+                @include('task.layouts.btnClose')
             </div>
             <div class="modal-body">
                 <div class="form">
@@ -26,8 +24,7 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary close-btn" data-dismiss="modal">Close</button>
-                <button wire:click='store' class="btn btn-success">Add</button>
+                <button wire:click='update' class="btn btn-success">Edit</button>
             </div>
         </div>
     </div>

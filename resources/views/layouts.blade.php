@@ -7,7 +7,7 @@
         <script src="{{ asset('js/app.js') }}" defer></script>
         <!-- Styles -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-@livewireStyles
+        @livewireStyles
     </head>
     <body >
         <nav class="navbar sticky-top navbar-dark bg-dark">
