@@ -13,7 +13,7 @@ public $tasks,$name,$description;
         return view('livewire.task-component');
     }
     public function store(){
-        $this->validate(['name'=>'required','description'=>'required']);
+        $this->validate(['name'=>'required','description'=>'required|max:20']);
         Task::create(['name'=>$this->name,'description'=>$this->description]);
     }
     public function destroy($id){

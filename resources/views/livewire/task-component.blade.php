@@ -1,30 +1,29 @@
 <div class="container-fluid">
 <div class="row justify-content-center">
+    <div class="col-12 text-left">
+        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addTaskModal">
+            Add Task
+        </button>
+    </div>
     @forelse ($tasks as $t)
-        <div class="col-4">
+        <div class="col-lg-4 col-12">
             {{ $t->name }}
         </div>
-        <div class="col-4">
+        <div class="col-lg-4 col-12">
             {{ $t->description }}
         </div>
-        <div class="col-2">
-            <button class="btn btn-warning text-white" wire:click="edit({{ $t->id }})">Editar</button>
+        <div class="col-lg-1 col-3">
+            <button type="button" class="btn btn-warning text-white" data-toggle="modal" data-target="#editTaskModal">
+               Edit
+              </button>
         </div>
-        <div class="col-2">
-            <button class="btn btn-danger text-white" wire:click="destroy({{ $t->id }})">Eliminar</button>
+        
+        <div class="col-lg-1 col-3">
+            <button class="btn btn-danger text-white" wire:click="destroy({{ $t->id }})">Delete</button>
         </div>
     @empty
         <p>Not found tasks</p>
     @endforelse
 </div>
-<div class="row justify-content-center">
-    <div class="col-2">
-      <div class="form">
-            <div class="form-group">
-                <input type="text" wire:model="name" class="form-control">
-                <input type="text" wire:model="description">
-                <button wire:click='store' class="btn btn-success">Agregar</button>
-            </div>
-        </div>
-      </div>
-   </div></div>
+@include('editTask')
+@include('addTask')
