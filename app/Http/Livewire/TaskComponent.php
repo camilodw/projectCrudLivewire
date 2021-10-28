@@ -3,7 +3,7 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
-use App\models\Task;
+use App\Models\Task;
 class TaskComponent extends Component
 {
     public $tasks,$name,$description,$task_id;
