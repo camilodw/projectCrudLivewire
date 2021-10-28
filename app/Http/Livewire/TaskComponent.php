@@ -26,6 +26,7 @@ class TaskComponent extends Component
     public function destroy()
     {
        Task::destroy($this->task_id);
+       $this->setInputs();
     }
     public function edit($id)
     {
@@ -41,6 +42,7 @@ class TaskComponent extends Component
         $task->name=$this->name;
         $task->description=$this->description;
         $task->save();
+        $this->setInputs();
     }
     public function setInputs()
     {

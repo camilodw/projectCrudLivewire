@@ -24,7 +24,7 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button wire:click='update' class="btn btn-success">Edit</button>
+                <button wire:click='update' class="btn btn-success" data-dismiss="modal" aria-label="Close">Edit</button>
             </div>
         </div>
     </div>

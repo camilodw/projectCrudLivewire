@@ -24,8 +24,7 @@
                 </div>
             </div>
             <div class="modal-footer">
-               
-                <button wire:click='store' class="btn btn-success">Add</button>
+                <button wire:click='store' class="btn btn-success" data-dismiss="modal" aria-label="Close">Add</button>
             </div>
         </div>
     </div>

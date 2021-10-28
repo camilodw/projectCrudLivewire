@@ -9,7 +9,7 @@
                 <p class="text-danter">Are you sure to delete this task?</p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-danger" wire:click="destroy()">Delete</button>
+                <button type="button" class="btn btn-danger" wire:click="destroy()" data-dismiss="modal" aria-label="Close">Delete</button>
             </div>
         </div>
     </div>
